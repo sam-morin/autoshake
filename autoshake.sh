@@ -7,6 +7,9 @@ cleanup() {
 }
 trap cleanup EXIT
 
+sudo airmon-ng check kill
+sudo airmon-ng start wlan1
+
 # Ask for SSID
 echo -n "Enter the SSID: "
 read SSID
