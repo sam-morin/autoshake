@@ -4,6 +4,8 @@
 cleanup() {
     pkill airodump-ng
     echo "Cleanup completed"
+    echo "Starting NetworkManager"
+    sudo systemctl start NetworkManager
 }
 trap cleanup EXIT
 
